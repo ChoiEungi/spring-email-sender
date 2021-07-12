@@ -1,4 +1,4 @@
-package com.example.mailapi.Domain;
+package com.example.mailapi.domain;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

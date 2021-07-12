@@ -1,4 +1,4 @@
-package com.example.mailapi.Domain;
+package com.example.mailapi.domain;
 
 public enum AppUserRole {
     USER,
