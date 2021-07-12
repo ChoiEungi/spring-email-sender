@@ -1,7 +1,6 @@
-package com.example.mailapi.repository;
+package com.example.mailapi.appuser;
 
 
-import com.example.mailapi.domain.AppUser;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

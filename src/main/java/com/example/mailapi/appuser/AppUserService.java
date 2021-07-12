@@ -1,6 +1,5 @@
-package com.example.mailapi.service;
+package com.example.mailapi.appuser;
 
-import com.example.mailapi.repository.AppUserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
