@@ -28,15 +28,24 @@ public class AppUser implements UserDetails {
             generator = "student_sequence"
     )
     private Long id;
-    private String name;
-    private String username;
+    private String firstName;
+    private String lastName;
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole; // for check admin or user
-    private Boolean locked; // lock email
-    private Boolean enabled; // check email enabled
+    private Boolean locked = false; // lock email
+    private Boolean enabled = false; // check email enabled
 
+    public AppUser(String firstName,
+                   String lastName, String email,
+                   String password, AppUserRole appUserRole) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.appUserRole = appUserRole;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -52,7 +61,7 @@ public class AppUser implements UserDetails {
 
     @Override
     public String getUsername() {
-        return username;
+        return email;
     }
 
     @Override
