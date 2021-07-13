@@ -60,7 +60,8 @@ public class AppUserService implements UserDetailsService {
                 appUser
         );
 
-        confirmationTokenService.saveConfirmationToken(confirmationToken);
+        confirmationTokenService.saveConfirmationToken(
+                confirmationToken);
 
         // send email
 
@@ -68,6 +69,10 @@ public class AppUserService implements UserDetailsService {
         return token;
 
 
+    }
+
+    public int enableAppUser(String email) {
+        return appUserRepository.enableAppUser(email);
     }
 
 }

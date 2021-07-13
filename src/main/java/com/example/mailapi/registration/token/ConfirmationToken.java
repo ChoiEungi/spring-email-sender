@@ -9,8 +9,9 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 
-@Setter
+
 @Getter
+@Setter
 @NoArgsConstructor
 @Entity
 public class ConfirmationToken {
